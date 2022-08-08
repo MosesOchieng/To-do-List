@@ -56,8 +56,8 @@
                     <div class="d-flex align-items-center pt-5">
                         <a href="PHP/form/signup.html" class="btn btn-primary py-3 px-4 me-5">Sign Up</a>
                         <br>
-                        <br>
-                        <br>
+                        <hr>
+                        <hr>
                         <a href="signin/login.php" class="btn btn-primary py-3 px-4 me-5">Log in</a>
                         <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
@@ -94,14 +94,48 @@
         </div>
     </div>
     <!-- Video Modal End -->
+    <br>
+    <div class="cookie-banner js-cookie-banner" style="text-align: center;">
+    <p>We use 🍪... To help you have easy when browsing through our Site.Kindly Accept Cookies .</p>
+    <button class="js-cookie-dismiss">Accept</button>
+</div>
+<script>
+    // Key under which name the cookie is saved
+const cookieName = 'cookieconsent';
+// The value could be used to store different levels of consent
+const cookieValue = 'dismissed';
 
+function dismiss() {
+    const date = new Date();
+    // Cookie is valid 1 year: now + (days x hours x minutes x seconds x milliseconds)
+    date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+    // Set cookie
+    document.cookie = `${cookieName}=${cookieValue};expires=${date.toUTCString()};path=/`;
+
+    // You probably want to remove the banner
+    document.querySelector('.js-cookie-banner').remove();
+}
+
+// Get button element
+const buttonElement = document.querySelector('.js-cookie-dismiss');
+// Maybe cookie consent is not present
+if (buttonElement) {
+    // Listen on button click
+    buttonElement.addEventListener('click', dismiss);
+}
+
+</script>
+    <br>
+     Privacy Policy
+    <a href="https://www.iubenda.com/privacy-policy/29708329" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a>
+    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
     <br>
     <br>
     <div class="container-fluid bg-dark text-white py-4">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom text-secondary" href="#">To Do List/a>, All Right Reserved.
+                        &copy; <a class="border-bottom text-secondary" href="#">To Do List</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                       
