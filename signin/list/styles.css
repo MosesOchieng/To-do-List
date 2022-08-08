@@ -6,26 +6,11 @@
     box-sizing: border-box;
 }
 
-body {
-    padding: 20px;
-    height: 100vh;
-    background: #ffffff;
-}
-
-
-
-.maincontainer {
-    width: 60%;
-    margin: auto;
-    padding: 10px;
-    top: 60px;
+.mainContainer {
     position: absolute;
-    left: 10px;
-    background: white;
-    border-radius: 10px;
+    width: 95%;
+    right: 20px;
     text-align: center;
-
-
 }
 
 #addTask {
@@ -41,7 +26,7 @@ body {
     position: relative;
 }
 
-#addTask input {
+.top input {
     width: 30%;
     margin-left:10px;
     margin-right:10px;
@@ -54,6 +39,9 @@ body {
     font-weight: 500;
     position: relative;
     border-radius: 5px;
+}
+#addTask input .checkbox{
+    width:10px;
 }
 
 #addTask input #time {
@@ -72,7 +60,7 @@ body {
 
 #addTask input:focus {
     outline: none;
-    border-color: #0d75ec;
+    border-color: rgb(243, 198, 35);
 }
 
 .top {
@@ -108,7 +96,7 @@ body {
     margin-bottom:10px;
 }
 
-#addTask button {
+.top button {
     position: relative;
     float: left;
     width: 40%;
@@ -118,9 +106,9 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 16px;
-    background-color: #0d75ec;
+    background-color: #ecb80d;;
     border: none;
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
     outline: none;
 }
@@ -137,12 +125,12 @@ body {
     font-size: 16px;
     background-color: #ecb80d;
     border: none;
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
     outline: none;
 }
 
-#addTask button:disabled {
+.top button:disabled {
     position: relative;
     float: right;
     width: 30%;
@@ -160,9 +148,8 @@ body {
 }
 
 #tasks {
-    background-color: #ffffff;
     left: 430px;
-    padding: 30px 20px;
+    padding-top: 20px;
     margin-top: 10px;
     border-radius: 10px;
     width: 75%;
@@ -170,13 +157,14 @@ body {
 }
 
 #tasks .checked {
-    background-color: #00ff84;
+    background-image: linear-gradient(135deg, rgb(243, 198, 35) 25%, transparent 25%, transparent 50%, rgb(243, 198, 35) 50%, rgb(243, 198, 35) 75%, transparent 75%, rgb(0, 0, 0));
+    background-size: 200px 200px;
+    /* background-color: rgb(62, 62, 62); */
 }
 
 .task {
     position:relative;
     text-align: center;
-    background-color: #c5e1e6;
     height: auto;
     margin-bottom: 8px;
     padding: 5px 10px;
@@ -184,11 +172,7 @@ body {
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #939697;
     cursor: pointer;
-}
-.task .checkbox{
-    width:1%;
 }
 
 .task span {
@@ -199,8 +183,13 @@ body {
 }
 
 .task button {
-    background-color: #0a2ea4;
-    color: #ffffff;
+    background-color:rgb(243, 198, 35);
+    box-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+    color: #000000;
     height:40px;
     width: 40px;
     border-radius: 5px;
@@ -210,20 +199,29 @@ body {
 }
 
 #taskname {
-    width: 30%;
+    width: 80%;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
+#taskname p {
+    color: #ffffff;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+    padding-left: 20px;
+    text-align: left;
+}
 #taskname #title {
-    /* text-align: center; */
     font-weight: bold;
 }
 
 .timestamp p {
     position: absolute;
     text-align: center;
-    right: 200px;
-    transform: translateY(-70px);
+    right: 0;
+    transform: translateY(-90px);
 }
