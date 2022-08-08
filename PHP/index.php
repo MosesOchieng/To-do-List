@@ -32,9 +32,9 @@ function test_input($data) {
   return $data;
 }
 
-echo "<h2>Your Input:</h2>";
+echo "<p>Hello There ,</p>";
 echo $Username;
-echo $Password;
+
 
 ?>
 <?php
